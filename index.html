@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder with Shareable Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resume Builder by M. Muneeb Adil</h1>
+    <form id="resumeForm">
+        <fieldset>
+            <legend>Personal Info</legend>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username"><br>
+        
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name"><br>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+        
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number"><br>
+
+            <label for="profileImage">Profile Image</label>
+            <input type="file" id="profileImage" name="profileImage" accept="image/*"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education</label>
+            <textarea name="education" id="education" rows="4" required placeholder="Enter your educational background"></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience</label>
+            <textarea name="experience" id="experience" rows="4" required placeholder="Enter your work experience"></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills</label>
+            <textarea name="skills" id="skills" rows="4" required placeholder="Enter your skills"></textarea><br>
+        </fieldset>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resumeOutput"></div>
+
+    <!-- Shareable URL Section -->
+    <div id="shareSection" style="display:none;">
+        <h3>Shareable Link</h3>
+        <p>Your unique resume link:</p>
+        <input type="text" id="shareLink" readonly>
+        <button id="copyLink">Copy Link</button>
+        <button id="downloadPdf">Download as PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
